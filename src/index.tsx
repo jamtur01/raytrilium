@@ -19,8 +19,20 @@ interface NoteAttributes {
 }
 
 function setupTepiApi() {
-  const preferences = getPreferenceValues<Preferences>();
-  tepi.token(preferences.triliumApiKey);
+  try {
+    const preferences = getPreferenceValues<Preferences>();
+    if (!preferences.triliumApiKey) {
+      throw new Error("Trilium API key is not set in preferences.");
+    }
+    tepi.server(preferences.triliumServerUrl).token(preferences.triliumApiKey);
+  } catch (error) {
+    console.error("Error setting up Trilium API:", error);
+    showToast({
+      style: Toast.Style.Failure,
+      title: "Error",
+      message: "Failed to setup Trilium API. Check your API key and preferences.",
+    });
+  }
 }
 
 async function fetchParentNotes(): Promise<ParentNotesResponse> {

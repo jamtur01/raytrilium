@@ -1,13 +1,13 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "trilium",
-  "title": "Trilium",
+  "name": "raytrilium",
+  "title": "RayTrilium",
   "description": "Create a note in Trilium",
   "version": "0.0.1",
   "icon": "extension_icon.png",
   "categories": [
-    "News",
-    "Communication"
+    "Applications",
+    "Productivity"
   ],
   "author": "jamtur01",
   "license": "MIT",
@@ -27,6 +27,15 @@
       "description": "Trilium API Key",
       "placeholder": "Enter your Trilium API Key",
       "required": true
+    },
+    {
+      "name": "triliumServerUrl",
+      "type": "textfield",
+      "title": "Trilium Server URL",
+      "description": "Trilium Server URL",
+      "placeholder": "Enter your Trilium Server URL",
+      "default": "http://127.0.0.1:37840/etapi",
+      "required": false
     }
   ],
   "dependencies": {

@@ -1,4 +1,4 @@
-# Trilium
+# RayTrilium
 
 ## [Initial version of the extension.] - 2024-01-25
 
