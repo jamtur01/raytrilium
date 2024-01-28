@@ -41,6 +41,7 @@
   "dependencies": {
     "@raycast/api": "^1.64.5",
     "@raycast/utils": "^1.10.1",
+    "node-fetch": "^3.3.2",
     "trilium-etapi": "^0.1.2"
   },
   "devDependencies": {
