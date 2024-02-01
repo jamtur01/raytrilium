@@ -120,7 +120,7 @@ export default function Command() {
       }
     >
       <Form.Description text="Create a new note in Trilium." />
-      <Form.TextField id="title" title="Note title" placeholder="Enter the note's title" />
+      <Form.TextField id="title" title="Note Title" placeholder="Enter the note's title" />
       <Form.TextArea id="content" title="Note" placeholder="Enter the note's content" />
       <Form.Dropdown id="parentNoteId" title="Parent Note" defaultValue={defaultParentNoteId}>
         {parentNotes.map((note) => (
